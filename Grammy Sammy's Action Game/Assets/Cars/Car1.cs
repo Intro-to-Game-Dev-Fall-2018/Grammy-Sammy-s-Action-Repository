@@ -26,7 +26,11 @@ public class Car1 : MonoBehaviour
 		//this is fine and dandy for now but try making it so that it reverts to the original position when
 		//it hits the edge of the screen, not just when it exceeds x = 10
 		//Debug.Log("Camera width is: " + Screen.width + " and the car is at " + transform.position.x);
-		if (transform.position.x >= 10)
+		if (speed >= 0 && transform.position.x >= 10)
+		{
+			transform.position = startPos;
+		}
+		else if (speed <= 0 && transform.position.x <= -10)
 		{
 			transform.position = startPos;
 		}

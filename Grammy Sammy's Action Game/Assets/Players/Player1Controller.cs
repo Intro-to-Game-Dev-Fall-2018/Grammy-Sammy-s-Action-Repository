@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Player1Controller : MonoBehaviour
 {
-
+	
 	public float speed;
-	public float startLocation;
+	public float startX;
+	public float startY;
 
 	Rigidbody2D myRigidbody;
 
@@ -19,7 +20,7 @@ public class Player1Controller : MonoBehaviour
 
 		//Vector2 v1 = new Vector2(0, 1)
 		//Vector2 v2 = new Vector2(0, 1, 0);
-		startPos = new Vector2(4.6f, -4.31f);
+		startPos = new Vector2(startX, startY);
 	}
 
 	// Update is called once per frame
@@ -39,13 +40,18 @@ public class Player1Controller : MonoBehaviour
 		}
 	}
 
-	private void OnTriggerEnter2D(Collider2D otherObj)
+	void OnTriggerEnter2D(Collider2D otherObj)
 	{
 		if (otherObj.CompareTag("Car"))
 		{
 			Debug.Log("Player has collided with a car!");
 			transform.position = startPos;
 		}
+
+		/*if (otherObj.CompareTag("Goal"))
+		{
+			Debug.Log("Player 1 has scored a point!");
+		}*/
 	}
 }
 

@@ -6,7 +6,8 @@ public class Player2Controller : MonoBehaviour
 {
 
     public float speed;
-    public float startLocation;
+    public float startX;
+    public float startY;
 
     Rigidbody2D myRigidbody;
 
@@ -19,7 +20,7 @@ public class Player2Controller : MonoBehaviour
 
         //Vector2 v1 = new Vector2(0, 1)
         //Vector2 v2 = new Vector2(0, 1, 0);
-        startPos = new Vector2(-5.07f, -4.31f);
+        startPos = new Vector2(startX, startY);
     }
 
     // Update is called once per frame
