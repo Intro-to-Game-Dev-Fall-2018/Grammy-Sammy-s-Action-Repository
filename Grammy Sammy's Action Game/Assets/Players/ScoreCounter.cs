@@ -7,15 +7,18 @@ public class ScoreCounter : MonoBehaviour
 {
 
 	public Text scoreCounter;
-	private int score; 
-	
+	private int score;
+
+	public float startX;
+	public float startY;
 	private Vector2 startPos;
 
 	private float timeRemaining;
 	
 	// Use this for initialization
-	void Start () {
-		startPos = new Vector2(4.6f, -4.31f);
+	void Start ()
+	{
+		startPos = new Vector2(startX, startY);
 		score = 0;
 		timeRemaining = 140f;
 		

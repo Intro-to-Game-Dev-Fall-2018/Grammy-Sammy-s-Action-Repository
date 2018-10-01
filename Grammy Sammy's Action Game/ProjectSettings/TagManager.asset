@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Car
   - Goal
+  - Player RIGHT
+  - Player LEFT
   layers:
   - Default
   - TransparentFX

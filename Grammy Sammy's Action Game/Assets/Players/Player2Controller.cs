@@ -28,7 +28,17 @@ public class Player2Controller : MonoBehaviour
     {
 
         if (Input.GetKey(KeyCode.W))
-        {
+        {if (Input.GetKey(KeyCode.W))
+                 {
+                     transform.Translate(Vector2.up * 0.1f);
+                     Debug.Log("w is pressed");
+                 }
+         
+                 if (Input.GetKey(KeyCode.S))
+                 {
+                     transform.Translate(Vector2.up * -0.1f);
+                     Debug.Log("down arrow pressed");
+                 }
             transform.Translate(Vector2.up * 0.1f);
             Debug.Log("w is pressed");
         }

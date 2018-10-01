@@ -25,7 +25,7 @@ public class Restart : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.Escape))
 		{
-			playerObj.GetComponent<Player1Controller>().enabled = !true;
+			playerObj.GetComponent<PlayerController>().enabled = !true;
 		}
 	}
 }
