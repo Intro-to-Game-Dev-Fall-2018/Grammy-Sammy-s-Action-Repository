@@ -5,61 +5,145 @@ using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
+	private int score;
+	
+	private Sprite[] scoreNumbers;
 
+	public Sprite zero;
+	public Sprite one;
+	public Sprite two;
+	public Sprite three;
+	public Sprite four;
+	public Sprite five;
+	public Sprite six;
+	public Sprite seven;
+	public Sprite eight;
+	public Sprite nine;
+	
+	private SpriteRenderer mySpriteRenderer;
+	
+	private PlayerController controllerScript;
+	
+	void Start()
+	{
+		scoreNumbers = new Sprite[]
+		{
+			zero, one, two, three, four, five, six, seven, eight, nine
+		};
+		
+		mySpriteRenderer = GetComponent<SpriteRenderer>();
+		controllerScript = gameObject.GetComponent<PlayerController>();
+	}
+
+	void FixedUpdate()
+	{
+		mySpriteRenderer.sprite = scoreNumbers[score];
+		/*if (score >= 10)
+		{
+			mySpriteRenderer.sprite = scoreNumbers
+		}*/
+	}
+
+	void OnTriggerEnter2D(Collider2D otherObj)
+	{
+
+		if (otherObj.CompareTag("Player RIGHT") || otherObj.CompareTag("Player LEFT"))
+		{
+			Debug.Log("A Player has scored a point!!");
+			score += 1;
+
+			//transform.position = startPos;
+		}
+
+	}
+
+
+	/*
 	public Text scoreCounter;
 	private int score;
 
+	//player's initial position
 	public float startX;
 	public float startY;
 	private Vector2 startPos;
 
+	//game ends after 2 minutes 20 seconds! 
 	private float timeRemaining;
-	
+
+	//sprites for the score
+	private Sprite[] scoreNumbers;
+
+	public Sprite zero;
+	public Sprite one;
+	public Sprite two;
+	public Sprite three;
+	public Sprite four;
+	public Sprite five;
+	public Sprite six;
+	public Sprite seven;
+	public Sprite eight;
+	public Sprite nine;
+
+	private SpriteRenderer mySpriteRenderer;
+
+	//reference to the player controller scripts from this one 
+	private PlayerController controllerScript;
+
+
 	// Use this for initialization
-	void Start ()
+	void Start()
 	{
-		startPos = new Vector2(startX, startY);
+		//startPos = new Vector2(startX, startY);
 		score = 0;
-		timeRemaining = 140f;
-		
+		timeRemaining = 100f;
+		//140f;
+
+		scoreNumbers = new Sprite[]
+		{
+			zero, one, two, three, four, five, six, seven, eight, nine
+		};
+
+		mySpriteRenderer = GetComponent<SpriteRenderer>();
+		controllerScript = gameObject.GetComponent<PlayerController>();
 	}
-	
+
 	// Update is called once per frame
-	void Update ()
+	void Update()
 	{
+		mySpriteRenderer.sprite = scoreNumbers[score];
+		
+		//Debug.Log(timeRemaining);
+		if (timeRemaining <= 0)
+		{
+			//disable movement and the cars
+			Debug.Log("game is over. Player controllers disabled.");
+			controllerScript.enabled = false;
+
+			StartBlinking();
+		}
+
 		ShowScore();
 	}
 
 	void OnTriggerEnter2D(Collider2D otherObj)
 	{
-		if (otherObj.CompareTag("Goal"))
+
+		if (otherObj.CompareTag("Player RIGHT"))
 		{
-			Debug.Log("Player has scored a point!!");
+			Debug.Log("A Player has scored a point!!");
 			score += 1;
-			transform.position = startPos;
+
+			//transform.position = startPos;
 		}
+
 	}
-	
+
 	void ShowScore()
 	{
-		scoreCounter.text = score.ToString();
-		//what's the win condition? 
-		//seems like it's a timer? After some amount of time the scores
-		//flash and whoever has the highest score wins... But 
-		//also no special screen for the winner 
-		//just that the scores flash colours
-		//2 minutes 20 seconds
-		//additionally, score starts to flash about 5 seconds before
-		//game actually ends to let the user know game is almost over.
+		//scoreCounter.text = score.ToString();
 		timeRemaining -= Time.deltaTime;
 		if (timeRemaining <= 5)
 		{
-			StartBlinking();
-		}
-		else if (timeRemaining <= 0)
-		{
-			//disable movement and the cars
-
 			StartBlinking();
 		}
 	}
@@ -94,3 +178,5 @@ public class ScoreCounter : MonoBehaviour
 	}
 }
 
+*/
+}

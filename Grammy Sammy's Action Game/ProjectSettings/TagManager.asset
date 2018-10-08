@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Car
-  - Goal
   - Player RIGHT
   - Player LEFT
+  - Goal
   layers:
   - Default
   - TransparentFX
