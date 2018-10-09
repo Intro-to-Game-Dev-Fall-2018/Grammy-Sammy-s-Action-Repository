@@ -1958,11 +1958,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.62
       objectReference: {fileID: 0}
     - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.08
       objectReference: {fileID: 0}
     - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1992,29 +1992,13 @@ Prefab:
       propertyPath: m_Name
       value: Slow Down Original
       objectReference: {fileID: 0}
+    - target: {fileID: 1405290472955376, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &829606982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1405290472955376, guid: b0332b4d959c84989bcaaf810420eb14,
-    type: 2}
-  m_PrefabInternal: {fileID: 829606981}
---- !u!58 &829606983
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 829606982}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.215
 --- !u!1001 &867618109
 Prefab:
   m_ObjectHideFlags: 0
