@@ -8,6 +8,8 @@ TagManager:
   - Player RIGHT
   - Player LEFT
   - Goal
+  - Collectibles
+  - Boundary
   layers:
   - Default
   - TransparentFX
