@@ -1094,18 +1094,6 @@ MonoBehaviour:
   six: {fileID: 21300000, guid: 8ac1be52ff06643788df54cc24158879, type: 3}
   seven: {fileID: 21300000, guid: 3c1b517c5de234f7c84699b2845b02a2, type: 3}
   eight: {fileID: 21300000, guid: a944704560ca749799c4d033271d2c7b, type: 3}
-  nine: {fileID: 21300000, guid: 5ab36d3a706bd4469a59fe961f8a27bb, type: 3}
-  ten: {fileID: 21300000, guid: 93f18a58fdc8144ff8846b43ba1bd474, type: 3}
-  eleven: {fileID: 21300000, guid: 3d08ffe1b74fb4d99b7a29acb9a6ff1f, type: 3}
-  twelve: {fileID: 21300000, guid: 0ae0be524f8624bf499f0cea17f8d53e, type: 3}
-  thirteen: {fileID: 21300000, guid: 38edc7c0d0dae4563ba3a14e8a93d595, type: 3}
-  fourteen: {fileID: 21300000, guid: f46e13fa0f0f04ce99036e9cf3f9e5cb, type: 3}
-  fifteen: {fileID: 21300000, guid: 99da5a9958ce7406ab0ccf1067431645, type: 3}
-  sixteen: {fileID: 21300000, guid: ee05d587ef32a45f9b547d446494eb97, type: 3}
-  seventeen: {fileID: 21300000, guid: af500bbdf7865467aaa50116e42427d3, type: 3}
-  eighteen: {fileID: 21300000, guid: e6203bf5352264e608971b99ef07f19c, type: 3}
-  nineteen: {fileID: 21300000, guid: ba75da41fd639438b8fde9c54e2ba2b0, type: 3}
-  twenty: {fileID: 21300000, guid: 2c0ace2ed47034699938cb59c9d5ea79, type: 3}
   scoreSoundClip: {fileID: 8300000, guid: 6c1f8ae5fbc474a6587c36602ec686ae, type: 3}
   scoreSoundSource: {fileID: 793917758}
   Collectible: {fileID: 0}
@@ -1961,6 +1949,72 @@ Transform:
   m_Father: {fileID: 437346780}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &829606981
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774142524413838, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405290472955376, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+      propertyPath: m_Name
+      value: Slow Down Original
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b0332b4d959c84989bcaaf810420eb14, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &829606982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1405290472955376, guid: b0332b4d959c84989bcaaf810420eb14,
+    type: 2}
+  m_PrefabInternal: {fileID: 829606981}
+--- !u!58 &829606983
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829606982}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.215
 --- !u!1001 &867618109
 Prefab:
   m_ObjectHideFlags: 0
@@ -2580,18 +2634,6 @@ MonoBehaviour:
   six: {fileID: 21300000, guid: 8ac1be52ff06643788df54cc24158879, type: 3}
   seven: {fileID: 21300000, guid: 3c1b517c5de234f7c84699b2845b02a2, type: 3}
   eight: {fileID: 21300000, guid: a944704560ca749799c4d033271d2c7b, type: 3}
-  nine: {fileID: 21300000, guid: 5ab36d3a706bd4469a59fe961f8a27bb, type: 3}
-  ten: {fileID: 21300000, guid: 93f18a58fdc8144ff8846b43ba1bd474, type: 3}
-  eleven: {fileID: 21300000, guid: 3d08ffe1b74fb4d99b7a29acb9a6ff1f, type: 3}
-  twelve: {fileID: 21300000, guid: 0ae0be524f8624bf499f0cea17f8d53e, type: 3}
-  thirteen: {fileID: 21300000, guid: 38edc7c0d0dae4563ba3a14e8a93d595, type: 3}
-  fourteen: {fileID: 21300000, guid: f46e13fa0f0f04ce99036e9cf3f9e5cb, type: 3}
-  fifteen: {fileID: 21300000, guid: 99da5a9958ce7406ab0ccf1067431645, type: 3}
-  sixteen: {fileID: 21300000, guid: ee05d587ef32a45f9b547d446494eb97, type: 3}
-  seventeen: {fileID: 21300000, guid: af500bbdf7865467aaa50116e42427d3, type: 3}
-  eighteen: {fileID: 21300000, guid: e6203bf5352264e608971b99ef07f19c, type: 3}
-  nineteen: {fileID: 21300000, guid: ba75da41fd639438b8fde9c54e2ba2b0, type: 3}
-  twenty: {fileID: 21300000, guid: 2c0ace2ed47034699938cb59c9d5ea79, type: 3}
   scoreSoundClip: {fileID: 8300000, guid: 6c1f8ae5fbc474a6587c36602ec686ae, type: 3}
   scoreSoundSource: {fileID: 1778297542}
   Collectible: {fileID: 1673890596287706, guid: e14016e363211443b883f5ef95b4fe98,
@@ -2733,18 +2775,6 @@ MonoBehaviour:
   six: {fileID: 21300000, guid: 8ac1be52ff06643788df54cc24158879, type: 3}
   seven: {fileID: 21300000, guid: 3c1b517c5de234f7c84699b2845b02a2, type: 3}
   eight: {fileID: 21300000, guid: a944704560ca749799c4d033271d2c7b, type: 3}
-  nine: {fileID: 21300000, guid: 5ab36d3a706bd4469a59fe961f8a27bb, type: 3}
-  ten: {fileID: 21300000, guid: 93f18a58fdc8144ff8846b43ba1bd474, type: 3}
-  eleven: {fileID: 21300000, guid: 3d08ffe1b74fb4d99b7a29acb9a6ff1f, type: 3}
-  twelve: {fileID: 21300000, guid: 0ae0be524f8624bf499f0cea17f8d53e, type: 3}
-  thirteen: {fileID: 21300000, guid: 38edc7c0d0dae4563ba3a14e8a93d595, type: 3}
-  fourteen: {fileID: 21300000, guid: f46e13fa0f0f04ce99036e9cf3f9e5cb, type: 3}
-  fifteen: {fileID: 21300000, guid: 99da5a9958ce7406ab0ccf1067431645, type: 3}
-  sixteen: {fileID: 21300000, guid: ee05d587ef32a45f9b547d446494eb97, type: 3}
-  seventeen: {fileID: 21300000, guid: af500bbdf7865467aaa50116e42427d3, type: 3}
-  eighteen: {fileID: 21300000, guid: e6203bf5352264e608971b99ef07f19c, type: 3}
-  nineteen: {fileID: 21300000, guid: ba75da41fd639438b8fde9c54e2ba2b0, type: 3}
-  twenty: {fileID: 21300000, guid: 2c0ace2ed47034699938cb59c9d5ea79, type: 3}
   scoreSoundClip: {fileID: 8300000, guid: 6c1f8ae5fbc474a6587c36602ec686ae, type: 3}
   scoreSoundSource: {fileID: 752846794}
   Collectible: {fileID: 1673890596287706, guid: e14016e363211443b883f5ef95b4fe98,
@@ -3302,6 +3332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCar: {fileID: 0}
+  powerUpTimeRemaining: 0
 --- !u!4 &1604471320
 Transform:
   m_ObjectHideFlags: 0

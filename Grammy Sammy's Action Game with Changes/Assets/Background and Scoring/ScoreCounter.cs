@@ -21,18 +21,6 @@ public class ScoreCounter : MonoBehaviour
 	public Sprite six;
 	public Sprite seven;
 	public Sprite eight;
-	public Sprite nine;
-	public Sprite ten;
-	public Sprite eleven;
-	public Sprite twelve;
-	public Sprite thirteen;
-	public Sprite fourteen;
-	public Sprite fifteen;
-	public Sprite sixteen;
-	public Sprite seventeen;
-	public Sprite eighteen;
-	public Sprite nineteen;
-	public Sprite twenty;
 
 	//spriteRenderer to change the sprites when a player scores
 	private SpriteRenderer mySpriteRenderer;
@@ -51,8 +39,7 @@ public class ScoreCounter : MonoBehaviour
 	{
 		scoreNumbers = new Sprite[]
 		{
-			zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve,
-			thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty
+			zero, one, two, three, four, five, six, seven, eight
 		};
 
 		mySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -62,7 +49,7 @@ public class ScoreCounter : MonoBehaviour
 		theSingleCollectible = new GameObject[1];
 		theSingleCollectible[0] = Instantiate(Collectible,
 			new Vector3(
-				Random.Range(transform.position.x - 4f, transform.position.x + 4f), 
+				Random.Range(transform.position.x - 3.5f, transform.position.x + 3.5f), 
 				Random.Range(transform.position.y - 6.5f, transform.position.y - 2.5f), 
 				0.5f),
 			transform.rotation);
@@ -75,9 +62,7 @@ public class ScoreCounter : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D otherObj)
 	{
-
 		if (otherObj.CompareTag("Collectibles"))
-			//(otherObj.CompareTag("Player RIGHT") || otherObj.CompareTag("Player LEFT"))
 		{
 			Debug.Log("A Player has scored a point!!");
 			score += 1;

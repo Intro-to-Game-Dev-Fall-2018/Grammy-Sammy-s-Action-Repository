@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//handles in game commands to restart or pause
+//also handles end conditions 
+
 public class Restart : MonoBehaviour
 {
 	public GameObject playerRight;
@@ -43,7 +46,7 @@ public class Restart : MonoBehaviour
 		{
 			playerRight.GetComponent<PlayerController>().enabled = false;
 			playerLeft.GetComponent<PlayerController>().enabled = false;
-			masterCarController.GetComponent<CarTimer>().enabled = true;
+			masterCarController.GetComponent<MasterCarController>().enabled = true;
 		}
 	}
 }

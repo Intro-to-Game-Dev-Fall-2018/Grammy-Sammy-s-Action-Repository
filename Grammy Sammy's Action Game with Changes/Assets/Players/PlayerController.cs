@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
 	public Sprite neutralDuck;
 	public Sprite extendedNeckDuck;
 	private int switchDuckSpriteCounter;
-	private float switchDuckSpriteTimer;
 
 	//freeze the cars and motion controls when the time is up
 	private float timeRemaining;
@@ -24,8 +23,8 @@ public class PlayerController : MonoBehaviour
 
 	public AudioClip collideWithCarSoundClip;
 	public AudioSource collideWithCarSoundSource;
-
-	private float timeBeforeMovingAgain;
+	
+	private bool slowDownTracker;
 
 	// Use this for initialization
 	void Start()
@@ -38,8 +37,7 @@ public class PlayerController : MonoBehaviour
 
 		collideWithCarSoundSource.clip = collideWithCarSoundClip;
 
-		timeBeforeMovingAgain = 10f;
-		switchDuckSpriteTimer = 0.25f;
+		slowDownTracker = false; 
 	}
 
 	// Update is called once per frame
@@ -179,5 +177,16 @@ public class PlayerController : MonoBehaviour
 				this.transform.position.y + 0.4f,
 				this.transform.position.z);
 		}
+
+		if (otherObj.CompareTag("Slow Down Power Up"))
+		{
+			Destroy(otherObj.gameObject);
+			slowDownTracker = true;
+		}
+	}
+
+	public bool getSlowDownTrackerStatus()
+	{
+		return slowDownTracker;
 	}
 }

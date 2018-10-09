@@ -19,9 +19,13 @@ public class Restart : MonoBehaviour
 	private int playerRightScoreVal;
 	private int playerLeftScoreVal;
 
+	private bool ifSlowDownCollected;
+	private float powerUpTimer;
+
 	// Use this for initialization
 	void Start()
-	{		
+	{
+		powerUpTimer = 7f;
 	}
 
 	// Update is called once per frame
@@ -29,6 +33,12 @@ public class Restart : MonoBehaviour
 	{
 		playerRightScoreVal = playerRightScoreObject.GetComponent<ScoreCounter>().getScore();
 		playerLeftScoreVal = playerLeftScoreObject.GetComponent<ScoreCounter>().getScore();
+
+		/*if (playerRight.GetComponent<PlayerController>().getSlowDownTrackerStatus() && powerUpTimer >= 0)
+		{
+			masterCarController.GetComponent<MasterCarController>().slowCarsRight(powerUpTimer);
+			powerUpTimer = masterCarController.GetComponent<MasterCarController>().slowCarsRight(powerUpTimer);
+		}*/
 		
 		if (Input.GetKey(KeyCode.Alpha2))
 		{
@@ -39,14 +49,14 @@ public class Restart : MonoBehaviour
 		{
 			playerRight.GetComponent<PlayerController>().enabled = false;
 			playerLeft.GetComponent<PlayerController>().enabled = false;
-			masterCarController.GetComponent<CarTimer>().enabled = true;
+			masterCarController.GetComponent<MasterCarController>().enabled = true;
 		}
 
 		if (playerLeftScoreVal >= 5)
 		{
 			playerRight.GetComponent<PlayerController>().enabled = false;
 			playerLeft.GetComponent<PlayerController>().enabled = false;
-			masterCarController.GetComponent<CarTimer>().enabled = true;
+			masterCarController.GetComponent<MasterCarController>().enabled = true;
 
 			player1WinText.SetActive(true);
 		}
@@ -55,7 +65,7 @@ public class Restart : MonoBehaviour
 		{
 			playerRight.GetComponent<PlayerController>().enabled = false;
 			playerLeft.GetComponent<PlayerController>().enabled = false;
-			masterCarController.GetComponent<CarTimer>().enabled = true;
+			masterCarController.GetComponent<MasterCarController>().enabled = true;
 
 			player2WinText.SetActive(true);
 		}
